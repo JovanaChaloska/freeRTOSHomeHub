@@ -1,0 +1,2 @@
+SVGDatabase.cpp:124:27:const touchgfx::VGObject* SVGDatabase::getInstance()	0	static
+SVGDatabase.cpp:129:10:uint16_t SVGDatabase::getInstanceSize()	0	static

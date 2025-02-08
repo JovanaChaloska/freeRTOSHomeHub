@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.24.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1">
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_FT94" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">00.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_C7KK" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_5EKX" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">00.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_BZ9N" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AY7B" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">00.00</Translation>
+      </Text>
+      <Text Id="__SingleUse_DMVP" Alignment="Left" TypographyId="Typography_00">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="te" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">New Text</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0-9" WildcardCharacterRanges="0-9" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0-9" WildcardCharacterRanges="0-9" />
+  </Typographies>
+</TextDatabase>

@@ -6,10 +6,14 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_AIRICON_ID = 0;
-const uint16_t BITMAP_FANICON_ID = 1;
-const uint16_t BITMAP_LIGHTICON_ID = 2;
-const uint16_t BITMAP_TEMPICON_ID = 3;
+const uint16_t BITMAP_AIRCONDITIONING_ID = 0;
+const uint16_t BITMAP_AIRICON_ID = 1;
+const uint16_t BITMAP_COOLICON_ID = 2;
+const uint16_t BITMAP_FANICON_ID = 3;
+const uint16_t BITMAP_HEATICON_ID = 4;
+const uint16_t BITMAP_LIGHTICON_ID = 5;
+const uint16_t BITMAP_PRESENT_ID = 6;
+const uint16_t BITMAP_TEMPICON_ID = 7;
 
 namespace BitmapDatabase
 {

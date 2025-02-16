@@ -31,15 +31,16 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Box box2;
+    touchgfx::Box box1;
     touchgfx::Line line1;
     touchgfx::PainterRGB565 line1Painter;
     touchgfx::TextAreaWithOneWildcard textAreaPollution;
     touchgfx::ScalableImage scalableImage1;
-    touchgfx::ScalableImage scalableImage1_1;
     touchgfx::ScalableImage scalableImage1_2;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  tempButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger >  lightButton;
     touchgfx::SVGImage fanImage;
+    touchgfx::ScalableImage scalableImage2;
 
     /*
      * Wildcard Buffers

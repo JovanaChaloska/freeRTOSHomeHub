@@ -18,5 +18,12 @@ void Screen3Presenter::deactivate()
 }
 void Screen3Presenter::setNewPollution(int pollutionval){
 	view.updatePollution(pollutionval);
+}
 
+void Screen3Presenter::setNewLight(float lightval){
+	view.updateLight(lightval);
+}
+
+void Screen3Presenter::setNewIsHome(int ishomeval){
+	view.updateIsHome(ishomeval);
 }

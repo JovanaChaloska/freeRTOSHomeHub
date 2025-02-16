@@ -20,3 +20,11 @@ void Screen1Presenter::setNewTemp(float tempval){
 	view.updateTemp(tempval);
 
 }
+
+void Screen1Presenter::setNewLight(float lightval){
+	view.updateLight(lightval);
+}
+
+void Screen1Presenter::setNewIsHome(int ishomeval){
+	view.updateIsHome(ishomeval);
+}

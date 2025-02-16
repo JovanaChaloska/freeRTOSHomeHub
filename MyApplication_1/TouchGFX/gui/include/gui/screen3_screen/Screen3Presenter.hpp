@@ -28,6 +28,8 @@ public:
     virtual ~Screen3Presenter() {}
 
     void setNewPollution(int pollutionval);
+    void setNewLight(float lightval);
+    void setNewIsHome(int ishomeval);
 
 private:
     Screen3Presenter();

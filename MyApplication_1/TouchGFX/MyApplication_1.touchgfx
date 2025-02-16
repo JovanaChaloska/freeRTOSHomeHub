@@ -6,80 +6,68 @@
         "CanvasBufferSize": 7200,
         "Components": [
           {
-            "Type": "ScalableImage",
-            "Name": "scalableImage1",
-            "X": 149,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
-            "Filename": "tempIcon.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
+            "Type": "Box",
+            "Name": "box2",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 194,
+              "Green": 183,
+              "Blue": 112
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Alpha": 0
+          },
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 183,
+            "Y": 259,
+            "Width": 51,
+            "Height": 50,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "StartX": 5.0,
+            "StartY": 5.0,
+            "EndX": 95.0,
+            "EndY": 5.0,
+            "LineWidth": 2.0,
+            "LineEndingStyle": "Butt"
           },
           {
             "Type": "ScalableImage",
-            "Name": "scalableImage1_1",
-            "X": 210,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
-            "Filename": "lightIcon.png",
+            "Name": "scalableImage1",
+            "X": 176,
+            "Y": 209,
+            "Width": 64,
+            "Height": 50,
+            "Filename": "tempIcon.png",
             "Alpha": 150,
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
             "Name": "scalableImage1_2",
-            "X": 270,
+            "X": 240,
             "Y": 206,
-            "Width": 79,
-            "Height": 56,
+            "Width": 73,
+            "Height": 53,
             "Filename": "airIcon.png",
-            "Alpha": 150,
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "FlexButton",
-            "Name": "lightButton",
-            "X": 215,
-            "Y": 209,
-            "Width": 50,
-            "Height": 50,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "TouchButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
             "Name": "airButton",
-            "X": 284,
-            "Y": 209,
+            "X": 251,
+            "Y": 212,
             "Width": 50,
             "Height": 50,
             "Alpha": 0,
@@ -116,8 +104,10 @@
           {
             "Type": "TextArea",
             "Name": "textAreaTemp",
-            "Width": 59,
-            "Height": 20,
+            "X": 139,
+            "Y": 164,
+            "Width": 170,
+            "Height": 24,
             "TextId": "__SingleUse_DMVP",
             "TextRotation": "0",
             "Color": {
@@ -133,201 +123,44 @@
             }
           },
           {
-            "Type": "Line",
-            "Name": "line1",
-            "X": 155,
-            "Y": 262,
-            "Width": 49,
-            "Height": 50,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "StartX": 5.0,
-            "StartY": 5.0,
-            "EndX": 95.0,
-            "EndY": 5.0,
-            "LineWidth": 2.0,
-            "LineEndingStyle": "Butt"
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "lightButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "airButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen3"
-            }
-          }
-        ]
-      },
-      {
-        "Name": "Screen2",
-        "CanvasBufferSize": 7200,
-        "Components": [
-          {
             "Type": "ScalableImage",
-            "Name": "scalableImage1",
-            "X": 149,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
-            "Filename": "tempIcon.png",
-            "Alpha": 150,
+            "Name": "scalableImage2",
+            "X": 8,
+            "Y": 9,
+            "Width": 53,
+            "Height": 45,
+            "Filename": "present.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
-            "Name": "scalableImage1_1",
-            "X": 210,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
-            "Filename": "lightIcon.png",
+            "Name": "scalableImage3",
+            "X": 175,
+            "Y": 54,
+            "Width": 119,
+            "Height": 105,
+            "Filename": "airConditioning.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
-            "Name": "scalableImage1_2",
-            "X": 270,
-            "Y": 206,
-            "Width": 79,
-            "Height": 56,
-            "Filename": "airIcon.png",
-            "Alpha": 150,
+            "Name": "heatIcon",
+            "X": 140,
+            "Y": 67,
+            "Width": 36,
+            "Height": 39,
+            "Filename": "heatIcon.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
-            "Type": "FlexButton",
-            "Name": "airButton",
-            "X": 284,
-            "Y": 212,
-            "Width": 50,
-            "Height": 50,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "tempButton",
-            "X": 154,
-            "Y": 209,
-            "Width": 50,
-            "Height": 50,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "Line",
-            "Name": "line1",
-            "X": 216,
-            "Y": 262,
-            "Width": 49,
-            "Height": 50,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "StartX": 5.0,
-            "StartY": 5.0,
-            "EndX": 95.0,
-            "EndY": 5.0,
-            "LineWidth": 2.0,
-            "LineEndingStyle": "Butt"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textAreaLight",
-            "Width": 59,
-            "Height": 20,
-            "TextId": "__SingleUse_BZ9N",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            },
-            "AutoSize": true,
-            "Wildcard1": {
-              "TextId": "__SingleUse_5EKX",
-              "UseBuffer": true,
-              "BufferSize": 40
-            }
+            "Type": "ScalableImage",
+            "Name": "coolIcon",
+            "X": 291,
+            "Y": 106,
+            "Width": 36,
+            "Height": 39,
+            "Filename": "coolIcon.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
           }
         ],
         "Interactions": [
@@ -341,18 +174,6 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Screen3"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "tempButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen1"
             }
           }
         ]
@@ -362,11 +183,29 @@
         "CanvasBufferSize": 7200,
         "Components": [
           {
+            "Type": "Box",
+            "Name": "box2",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 194,
+              "Green": 183,
+              "Blue": 112
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Alpha": 0
+          },
+          {
             "Type": "Line",
             "Name": "line1",
-            "X": 286,
-            "Y": 262,
-            "Width": 49,
+            "X": 250,
+            "Y": 259,
+            "Width": 51,
             "Height": 50,
             "Color": {
               "Red": 255,
@@ -383,8 +222,10 @@
           {
             "Type": "TextArea",
             "Name": "textAreaPollution",
-            "Width": 59,
-            "Height": 20,
+            "X": 143,
+            "Y": 162,
+            "Width": 162,
+            "Height": 24,
             "TextId": "__SingleUse_C7KK",
             "TextRotation": "0",
             "Color": {
@@ -402,78 +243,29 @@
           {
             "Type": "ScalableImage",
             "Name": "scalableImage1",
-            "X": 149,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
+            "X": 176,
+            "Y": 209,
+            "Width": 64,
+            "Height": 50,
             "Filename": "tempIcon.png",
             "Alpha": 150,
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "ScalableImage",
-            "Name": "scalableImage1_1",
-            "X": 210,
-            "Y": 206,
-            "Width": 60,
-            "Height": 56,
-            "Filename": "lightIcon.png",
-            "Alpha": 150,
-            "ScalingAlgorithm": "Nearest-neighbor"
-          },
-          {
-            "Type": "ScalableImage",
             "Name": "scalableImage1_2",
-            "X": 270,
+            "X": 240,
             "Y": 206,
-            "Width": 79,
-            "Height": 56,
+            "Width": 73,
+            "Height": 53,
             "Filename": "airIcon.png",
             "ScalingAlgorithm": "Nearest-neighbor"
           },
           {
             "Type": "FlexButton",
             "Name": "tempButton",
-            "X": 155,
-            "Y": 209,
-            "Width": 50,
-            "Height": 50,
-            "Alpha": 0,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "Width": 50,
-                "Height": 50,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Green": 102,
-                  "Blue": 153
-                },
-                "ColorPressed": {
-                  "Green": 153,
-                  "Blue": 204
-                },
-                "ColorBorderReleased": {
-                  "Green": 51,
-                  "Blue": 102
-                },
-                "ColorBorderPressed": {
-                  "Red": 51,
-                  "Green": 102,
-                  "Blue": 153
-                }
-              }
-            ]
-          },
-          {
-            "Type": "FlexButton",
-            "Name": "lightButton",
-            "X": 216,
-            "Y": 209,
+            "X": 183,
+            "Y": 207,
             "Width": 50,
             "Height": 50,
             "Alpha": 0,
@@ -510,14 +302,24 @@
           {
             "Type": "SvgImage",
             "Name": "fanImage",
-            "X": 164,
+            "X": 176,
             "Y": 20,
-            "Width": 152,
-            "Height": 152,
+            "Width": 129,
+            "Height": 130,
             "Image": "fanImage.svg",
             "FitImageToSize": true,
-            "ImageHorizontalScale": 0.13,
-            "ImageVerticalScale": 0.13
+            "ImageHorizontalScale": 0.11,
+            "ImageVerticalScale": 0.11
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "scalableImage2",
+            "X": 8,
+            "Y": 9,
+            "Width": 53,
+            "Height": 45,
+            "Filename": "present.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
           }
         ],
         "Interactions": [
@@ -531,18 +333,6 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Screen1"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "Trigger": {
-              "Type": "TriggerClicked",
-              "TriggerComponent": "lightButton"
-            },
-            "Action": {
-              "Type": "ActionGotoScreen",
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "Screen2"
             }
           }
         ]

@@ -12,11 +12,19 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 
-    //Declare the View widgets update functions
+    virtual void handleTickEvent();
+    void updateLight(float lightval);
+    void updateIsHome(int isHome);
     void updateTemp(float tempval);
 protected:
-
+    float alphavalue;
+    int ishome;
     int tickCounter;
+    float tempvalue;
+    float heatWidth;
+    float heatHeight;
+    float coolWidth;
+    float coolHeight;
 };
 
 #endif // SCREEN1VIEW_HPP

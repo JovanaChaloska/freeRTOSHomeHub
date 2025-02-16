@@ -27,6 +27,8 @@ public:
 
     virtual ~Screen2Presenter() {}
 
+    void setNewLight(float lightval);
+
 private:
     Screen2Presenter();
 

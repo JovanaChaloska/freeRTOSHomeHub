@@ -11,7 +11,6 @@ void Screen3View::setupScreen()
 
     fanImage.setRotation(rotationAngle);
     
-    // Set rotation center (adjust based on image size)
     fanImage.setRotationCenter(fanImage.getWidth() / 2, fanImage.getHeight() / 2);
 }
 
@@ -22,7 +21,7 @@ void Screen3View::tearDownScreen()
 
 void Screen3View::handleTickEvent()
 {
-    rotationAngle = (rotationAngle + rotationSpeed) % 360;
+    rotationAngle = (rotationAngle + rotationSpeed)*ishome % 360;
     fanImage.setRotation(rotationAngle);
     fanImage.invalidate();
 }
@@ -34,6 +33,17 @@ void Screen3View::setRotationSpeed(int speed)
 
 void Screen3View::updatePollution(int pollutionval){	
 	Unicode::snprintf(textAreaPollutionBuffer, TEXTAREAPOLLUTION_SIZE, "%d", pollutionval);
-    setRotationSpeed(pollutionval);
 	textAreaPollution.invalidate();
+    setRotationSpeed(pollutionval);
+}
+
+void Screen3View::updateLight(float lightval){	
+	box1.setAlpha(lightval);
+    box1.invalidate(); 
+}
+
+void Screen3View::updateIsHome(int isHome){	
+    ishome = isHome;
+	scalableImage2.setAlpha(255*isHome);
+    scalableImage2.invalidate(); 
 }

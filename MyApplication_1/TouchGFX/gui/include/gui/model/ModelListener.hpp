@@ -18,6 +18,8 @@ public:
     //Declare virtual functions and later override them in Presenter
     virtual void setNewTemp(float temp){}
     virtual void setNewPollution(int pollution){}
+    virtual void setNewLight(float light){}
+    virtual void setNewIsHome(int ishome){}
 
 protected:
     Model* model;

@@ -8,11 +8,11 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/canvas/Line.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
-#include <touchgfx/widgets/canvas/Line.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -30,14 +30,18 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage scalableImage1;
-    touchgfx::ScalableImage scalableImage1_1;
-    touchgfx::ScalableImage scalableImage1_2;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  lightButton;
-    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  airButton;
-    touchgfx::TextAreaWithOneWildcard textAreaTemp;
+    touchgfx::Box box2;
+    touchgfx::Box box1;
     touchgfx::Line line1;
     touchgfx::PainterRGB565 line1Painter;
+    touchgfx::ScalableImage scalableImage1;
+    touchgfx::ScalableImage scalableImage1_2;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::TouchButtonTrigger >  airButton;
+    touchgfx::TextAreaWithOneWildcard textAreaTemp;
+    touchgfx::ScalableImage scalableImage2;
+    touchgfx::ScalableImage scalableImage3;
+    touchgfx::ScalableImage heatIcon;
+    touchgfx::ScalableImage coolIcon;
 
     /*
      * Wildcard Buffers

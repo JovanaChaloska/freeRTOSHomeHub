@@ -90,8 +90,6 @@ extern xTaskHandle xTempSensor;
 extern xTaskHandle xLightSensor;
 extern xTaskHandle xPollutionSensor;
 extern xTaskHandle xIsHomeSensor;
-//extern xTaskHandle xPatient2;
-//extern xSemaphoreHandle xMutex;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -210,8 +208,8 @@ int main(void)
   /* add events, ... */
   xTaskCreate(TemperatureTask, "Temperature", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xTempSensor);
   xTaskCreate(PollutionTask, "Pollution", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xPollutionSensor);
-  /*xTaskCreate(LightTask, "Temperature", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xLightSensor);
-  xTaskCreate(IsHomeTask, "Temperature", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xIsHomeSensor);*/
+  xTaskCreate(LightTask, "Light", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xLightSensor);
+  xTaskCreate(IsHomeTask, "IsHome", configMINIMAL_STACK_SIZE, (void *) 1, 3, &xIsHomeSensor);
   /* USER CODE END RTOS_EVENTS */
 
   /* Start scheduler */
@@ -644,13 +642,13 @@ static void MX_GPIO_Init(void)
 void TemperatureTask(void * argument)
 {
 	float temperatureArray[] = {
-			40.000, 10.000, 20.000
+			25.000, 27.000, 30.000, 33.00, 36.00, 41.00, 36.00, 33.00, 30.00, 27.00, 25.00, 21.00, 17.00, 14.00, 10.00, 5.00, 1.00
 	};
 
 	/* Infinite loop */
 		for(;;)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 17; i++)
 			{
 				float temperatureValue =  temperatureArray[i];
 				vTaskDelay(500);
@@ -661,16 +659,16 @@ void TemperatureTask(void * argument)
 			//vTaskDelay(1000);
 		}
 }
-/*void LightTask(void * argument)
+void LightTask(void * argument)
 {
 	float LightArray[] = {
-			4.000, 2.000, 1.000
+			0.000, 15.000, 30.000, 50.000, 75.000, 100.000, 125.000, 150.000, 175.000, 200.000, 215.000, 225.000, 255.000
 	};
 
 	/* Infinite loop */
-/*		for(;;)
+		for(;;)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 13; i++)
 			{
 				float lightValue =  LightArray[i];
 				vTaskDelay(500);
@@ -680,17 +678,17 @@ void TemperatureTask(void * argument)
 
 			//vTaskDelay(1000);
 		}
-}*/
+}
 void PollutionTask(void * argument)
 {
 	int pollutionArray[] = {
-			2, 3, 4, 5, 6, 7, 8, 10, 20,30
+			2, 3, 4, 5, 6, 7, 8, 10, 20, 30, 20, 10, 8, 4
 	};
 
 	/* Infinite loop */
 		for(;;)
 		{
-			for (int i = 0; i < 10; i++)
+			for (int i = 0; i < 14; i++)
 			{
 				int pollutionValue =  pollutionArray[i];
 				vTaskDelay(500);
@@ -701,18 +699,18 @@ void PollutionTask(void * argument)
 			//vTaskDelay(1000);
 		}
 }
-/*void IsHomeTask(void * argument)
+void IsHomeTask(void * argument)
 {
 	float isHomeArray[] = {
-			1, 1, 0
+			1, 1, 1, 0, 0, 0, 1, 1
 	};
 
 	/* Infinite loop */
-/*		for(;;)
+		for(;;)
 		{
-			for (int i = 0; i < 3; i++)
+			for (int i = 0; i < 8; i++)
 			{
-				float isHomeValue =  isHomeArray[i];
+				int isHomeValue =  isHomeArray[i];
 				vTaskDelay(500);
 				xQueueSend(IsHomeQueueHandle, &isHomeValue, 0); // Send ECG signal to the queue value by value
 				vTaskDelay(500);
@@ -720,7 +718,7 @@ void PollutionTask(void * argument)
 
 			//vTaskDelay(1000);
 		}
-}*/
+}
 
 /* USER CODE END 4 */
 

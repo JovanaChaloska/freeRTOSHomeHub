@@ -17,7 +17,16 @@ Screen3ViewBase::Screen3ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    line1.setPosition(286, 262, 49, 50);
+    box2.setPosition(0, 0, 480, 272);
+    box2.setColor(touchgfx::Color::getColorFromRGB(194, 183, 112));
+    add(box2);
+
+    box1.setPosition(0, 0, 480, 272);
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    box1.setAlpha(0);
+    add(box1);
+
+    line1.setPosition(250, 259, 51, 50);
     line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     line1.setPainter(line1Painter);
     line1.setStart(5, 5);
@@ -26,7 +35,7 @@ Screen3ViewBase::Screen3ViewBase() :
     line1.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
     add(line1);
 
-    textAreaPollution.setXY(0, 0);
+    textAreaPollution.setXY(143, 162);
     textAreaPollution.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaPollution.setLinespacing(0);
     Unicode::snprintf(textAreaPollutionBuffer, TEXTAREAPOLLUTION_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_FT94).getText());
@@ -36,19 +45,13 @@ Screen3ViewBase::Screen3ViewBase() :
     add(textAreaPollution);
 
     scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_TEMPICON_ID));
-    scalableImage1.setPosition(149, 206, 60, 56);
+    scalableImage1.setPosition(176, 209, 64, 50);
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     scalableImage1.setAlpha(150);
     add(scalableImage1);
 
-    scalableImage1_1.setBitmap(touchgfx::Bitmap(BITMAP_LIGHTICON_ID));
-    scalableImage1_1.setPosition(210, 206, 60, 56);
-    scalableImage1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    scalableImage1_1.setAlpha(150);
-    add(scalableImage1_1);
-
     scalableImage1_2.setBitmap(touchgfx::Bitmap(BITMAP_AIRICON_ID));
-    scalableImage1_2.setPosition(270, 206, 79, 56);
+    scalableImage1_2.setPosition(240, 206, 73, 53);
     scalableImage1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(scalableImage1_2);
 
@@ -57,24 +60,21 @@ Screen3ViewBase::Screen3ViewBase() :
     tempButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     tempButton.setAlpha(0);
     tempButton.setAction(flexButtonCallback);
-    tempButton.setPosition(155, 209, 50, 50);
+    tempButton.setPosition(183, 207, 50, 50);
     add(tempButton);
 
-    lightButton.setBoxWithBorderPosition(0, 0, 50, 50);
-    lightButton.setBorderSize(5);
-    lightButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    lightButton.setAlpha(0);
-    lightButton.setAction(flexButtonCallback);
-    lightButton.setPosition(216, 209, 50, 50);
-    add(lightButton);
-
     fanImage.setSVG(SVG_FANIMAGE_ID);
-    fanImage.setPosition(164, 20, 152, 152);
-    fanImage.setScale(0.13f, 0.13f);
+    fanImage.setPosition(176, 20, 129, 130);
+    fanImage.setScale(0.11f, 0.11f);
     fanImage.setImagePosition(0, 0);
     fanImage.setRotationCenter(0, 0);
     fanImage.setRotation(0.0f);
     add(fanImage);
+
+    scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_PRESENT_ID));
+    scalableImage2.setPosition(8, 9, 53, 45);
+    scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(scalableImage2);
 }
 
 Screen3ViewBase::~Screen3ViewBase()
@@ -95,12 +95,5 @@ void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonCo
         //When tempButton clicked change screen to Screen1
         //Go to Screen1 with no screen transition
         application().gotoScreen1ScreenNoTransition();
-    }
-    if (&src == &lightButton)
-    {
-        //Interaction2
-        //When lightButton clicked change screen to Screen2
-        //Go to Screen2 with no screen transition
-        application().gotoScreen2ScreenNoTransition();
     }
 }

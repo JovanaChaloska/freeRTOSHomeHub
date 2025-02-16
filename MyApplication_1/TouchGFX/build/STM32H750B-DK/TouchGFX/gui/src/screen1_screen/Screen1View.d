@@ -47,6 +47,20 @@ TouchGFX/build/STM32H750B-DK/TouchGFX/gui/src/screen1_screen/Screen1View.o: \
  TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
+ Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/Buttons.hpp \
@@ -69,21 +83,7 @@ TouchGFX/build/STM32H750B-DK/TouchGFX/gui/src/screen1_screen/Screen1View.o: \
  Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp \
- Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp
+ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
 
 TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
 
@@ -179,6 +179,34 @@ TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
+
+Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:
+
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ScalableImage.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
@@ -224,31 +252,3 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcar
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/Line.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRUtil.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/Utils.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Rasterizer.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Outline.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/Cell.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainter.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/transforms/DisplayTransformation.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CanvasWidget.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565.hpp:
-
-Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterColor.hpp:
-
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterRGB565.hpp:

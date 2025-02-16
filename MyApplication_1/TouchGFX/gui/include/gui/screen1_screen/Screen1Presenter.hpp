@@ -28,6 +28,8 @@ public:
     virtual ~Screen1Presenter() {}
 
     void setNewTemp(float tempval);
+    void setNewLight(float lightval);
+    void setNewIsHome(int ishomeval);
 
 private:
     Screen1Presenter();

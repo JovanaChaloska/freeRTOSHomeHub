@@ -55,12 +55,11 @@ Screen3ViewBase.cpp:80:1:Screen3ViewBase::~Screen3ViewBase()	8	static
 Screen3ViewBase.cpp:80:1:virtual Screen3ViewBase::~Screen3ViewBase()	8	static
 AbstractButtonContainer.hpp:99:18:virtual void touchgfx::AbstractButtonContainer::executeAction()	8	static
 ClickButtonTrigger.hpp:47:18:virtual void touchgfx::ClickButtonTrigger::handleClickEvent(const touchgfx::ClickEvent&)	16	static
-Screen3ViewBase.cpp:90:6:void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	16	static
+Screen3ViewBase.cpp:90:6:void Screen3ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer&)	8	static
 TextAreaWithWildcard.hpp:49:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	0	static
 Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 Box.hpp:33:5:touchgfx::Box::Box()	8	static
 AbstractPainterRGB565.hpp:41:5:touchgfx::AbstractPainterRGB565::AbstractPainterRGB565()	16	static
-BoxWithBorderButtonStyle.hpp:44:5:touchgfx::BoxWithBorderButtonStyle<T>::BoxWithBorderButtonStyle() [with T = touchgfx::ClickButtonTrigger]	16	static
-Screen3ViewBase.cpp:11:1:Screen3ViewBase::Screen3ViewBase()	96	static
+Screen3ViewBase.cpp:11:1:Screen3ViewBase::Screen3ViewBase()	112	static

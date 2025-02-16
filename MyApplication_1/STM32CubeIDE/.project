@@ -635,16 +635,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen1_screen/Screen1View.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/gui/Screen2Presenter.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen2_screen/Screen2Presenter.cpp</locationURI>
-		</link>
-		<link>
-			<name>Application/User/gui/Screen2View.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen2_screen/Screen2View.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/gui/Screen3Presenter.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/screen3_screen/Screen3Presenter.cpp</locationURI>
@@ -745,11 +735,6 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp</locationURI>
 		</link>
 		<link>
-			<name>Application/User/generated/Screen2ViewBase.cpp</name>
-			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp</locationURI>
-		</link>
-		<link>
 			<name>Application/User/generated/Screen3ViewBase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/screen3_screen/Screen3ViewBase.cpp</locationURI>
@@ -765,9 +750,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_airConditioning.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_airConditioning.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_airIcon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_airIcon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_coolIcon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_coolIcon.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_fanIcon.cpp</name>
@@ -775,9 +770,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_fanIcon.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_heatIcon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_heatIcon.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_lightIcon.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_lightIcon.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_present.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_present.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_tempIcon.cpp</name>

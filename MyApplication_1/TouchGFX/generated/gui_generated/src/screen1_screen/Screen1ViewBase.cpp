@@ -16,40 +16,44 @@ Screen1ViewBase::Screen1ViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    box2.setPosition(0, 0, 480, 272);
+    box2.setColor(touchgfx::Color::getColorFromRGB(194, 183, 112));
+    add(box2);
+
+    box1.setPosition(0, 0, 480, 272);
+    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    box1.setAlpha(0);
+    add(box1);
+
+    line1.setPosition(183, 259, 51, 50);
+    line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    line1.setPainter(line1Painter);
+    line1.setStart(5, 5);
+    line1.setEnd(95, 5);
+    line1.setLineWidth(2);
+    line1.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
+    add(line1);
+
     scalableImage1.setBitmap(touchgfx::Bitmap(BITMAP_TEMPICON_ID));
-    scalableImage1.setPosition(149, 206, 60, 56);
+    scalableImage1.setPosition(176, 209, 64, 50);
     scalableImage1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    scalableImage1.setAlpha(150);
     add(scalableImage1);
 
-    scalableImage1_1.setBitmap(touchgfx::Bitmap(BITMAP_LIGHTICON_ID));
-    scalableImage1_1.setPosition(210, 206, 60, 56);
-    scalableImage1_1.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    scalableImage1_1.setAlpha(150);
-    add(scalableImage1_1);
-
     scalableImage1_2.setBitmap(touchgfx::Bitmap(BITMAP_AIRICON_ID));
-    scalableImage1_2.setPosition(270, 206, 79, 56);
+    scalableImage1_2.setPosition(240, 206, 73, 53);
     scalableImage1_2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
-    scalableImage1_2.setAlpha(150);
     add(scalableImage1_2);
-
-    lightButton.setBoxWithBorderPosition(0, 0, 50, 50);
-    lightButton.setBorderSize(5);
-    lightButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
-    lightButton.setAlpha(0);
-    lightButton.setAction(flexButtonCallback);
-    lightButton.setPosition(215, 209, 50, 50);
-    add(lightButton);
 
     airButton.setBoxWithBorderPosition(0, 0, 50, 50);
     airButton.setBorderSize(5);
     airButton.setBoxWithBorderColors(touchgfx::Color::getColorFromRGB(0, 102, 153), touchgfx::Color::getColorFromRGB(0, 153, 204), touchgfx::Color::getColorFromRGB(0, 51, 102), touchgfx::Color::getColorFromRGB(51, 102, 153));
     airButton.setAlpha(0);
     airButton.setAction(flexButtonCallback);
-    airButton.setPosition(284, 209, 50, 50);
+    airButton.setPosition(251, 212, 50, 50);
     add(airButton);
 
-    textAreaTemp.setXY(0, 0);
+    textAreaTemp.setXY(139, 164);
     textAreaTemp.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textAreaTemp.setLinespacing(0);
     Unicode::snprintf(textAreaTempBuffer, TEXTAREATEMP_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_AY7B).getText());
@@ -58,14 +62,25 @@ Screen1ViewBase::Screen1ViewBase() :
     textAreaTemp.setTypedText(touchgfx::TypedText(T___SINGLEUSE_DMVP));
     add(textAreaTemp);
 
-    line1.setPosition(155, 262, 49, 50);
-    line1Painter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    line1.setPainter(line1Painter);
-    line1.setStart(5, 5);
-    line1.setEnd(95, 5);
-    line1.setLineWidth(2);
-    line1.setLineEndingStyle(touchgfx::Line::BUTT_CAP_ENDING);
-    add(line1);
+    scalableImage2.setBitmap(touchgfx::Bitmap(BITMAP_PRESENT_ID));
+    scalableImage2.setPosition(8, 9, 53, 45);
+    scalableImage2.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(scalableImage2);
+
+    scalableImage3.setBitmap(touchgfx::Bitmap(BITMAP_AIRCONDITIONING_ID));
+    scalableImage3.setPosition(175, 54, 119, 105);
+    scalableImage3.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(scalableImage3);
+
+    heatIcon.setBitmap(touchgfx::Bitmap(BITMAP_HEATICON_ID));
+    heatIcon.setPosition(140, 67, 36, 39);
+    heatIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(heatIcon);
+
+    coolIcon.setBitmap(touchgfx::Bitmap(BITMAP_COOLICON_ID));
+    coolIcon.setPosition(291, 106, 36, 39);
+    coolIcon.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(coolIcon);
 }
 
 Screen1ViewBase::~Screen1ViewBase()
@@ -80,16 +95,9 @@ void Screen1ViewBase::setupScreen()
 
 void Screen1ViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src)
 {
-    if (&src == &lightButton)
-    {
-        //Interaction1
-        //When lightButton clicked change screen to Screen2
-        //Go to Screen2 with no screen transition
-        application().gotoScreen2ScreenNoTransition();
-    }
     if (&src == &airButton)
     {
-        //Interaction2
+        //Interaction1
         //When airButton clicked change screen to Screen3
         //Go to Screen3 with no screen transition
         application().gotoScreen3ScreenNoTransition();

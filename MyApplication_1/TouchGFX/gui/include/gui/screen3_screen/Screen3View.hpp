@@ -14,10 +14,14 @@ public:
     virtual void handleTickEvent();
 
     void setRotationSpeed(int speed);
+    void updateLight(float lightval);
+    void updateIsHome(int isHome);
     void updatePollution(int pollutionval);
 private:
     int rotationAngle;
     int rotationSpeed;
+    float alphavalue;
+    int ishome;
     int tickCounter;
 };
 
